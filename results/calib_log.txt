@@ -1,0 +1,84 @@
+survival data verified —  6003 rows | 1026 batteries | events 2783 (46.4%) | duration 1–581 d
+
+at-risk: 1961 rows, 868 events, 927 batteries
+
+==============================================================================
+Grad Boost Surv — 4-week horizon (base rate 9.370%)
+==============================================================================
+variant              Brier      ECE      MCE      AUC  mean pred
+uncalibrated        0.0704   0.0184   0.0660    0.840     0.0869
+isotonic            0.0744   0.0222   0.0545    0.821     0.0998
+platt               0.0766   0.0548   0.1547    0.800     0.1010
+  monotonicity check — AUC unchanged by isotonic: OK
+
+  reliability, uncalibrated:
+   predicted   observed      n
+       0.016      0.008    359
+       0.024      0.017    358
+       0.040      0.045    359
+       0.076      0.103    358
+       0.278      0.295    359
+
+==============================================================================
+Grad Boost Surv — 12-week horizon (base rate 29.941%)
+==============================================================================
+variant              Brier      ECE      MCE      AUC  mean pred
+uncalibrated        0.1457   0.0305   0.1072    0.827     0.2963
+isotonic            0.1491   0.0260   0.0651    0.817     0.3014
+platt               0.1492   0.0566   0.1238    0.822     0.3024
+  monotonicity check — AUC unchanged by isotonic: OK
+
+  reliability, uncalibrated:
+   predicted   observed      n
+       0.076      0.059    303
+       0.116      0.119    302
+       0.197      0.201    303
+       0.347      0.397    302
+       0.745      0.719    303
+
+==============================================================================
+RSF — 4-week horizon (base rate 9.370%)
+==============================================================================
+variant              Brier      ECE      MCE      AUC  mean pred
+uncalibrated        0.0704   0.0273   0.1196    0.845     0.0906
+isotonic            0.0732   0.0165   0.0357    0.837     0.1009
+platt               0.0782   0.0664   0.2225    0.818     0.1006
+  monotonicity check — AUC unchanged by isotonic: OK
+
+  reliability, uncalibrated:
+   predicted   observed      n
+       0.015      0.011    359
+       0.034      0.011    358
+       0.061      0.039    359
+       0.104      0.095    358
+       0.238      0.312    359
+
+==============================================================================
+RSF — 12-week horizon (base rate 29.941%)
+==============================================================================
+variant              Brier      ECE      MCE      AUC  mean pred
+uncalibrated        0.1496   0.0522   0.1578    0.825     0.2813
+isotonic            0.1488   0.0298   0.0562    0.815     0.3045
+platt               0.1501   0.0647   0.1311    0.822     0.3057
+  monotonicity check — AUC unchanged by isotonic: OK
+
+  reliability, isotonic:
+   predicted   observed      n
+       0.030      0.058    260
+       0.113      0.130    332
+       0.206      0.192    291
+       0.371      0.349    284
+       0.722      0.694    346
+
+preserved earlier results from paper_results.json inside calibration_results.json
+
+==============================================================================
+SUMMARY — Brier score, lower is better
+==============================================================================
+model / horizon                  uncal  isotonic     platt       best
+Grad Boost Surv  4wk            0.0704    0.0744    0.0766 uncalibrated
+Grad Boost Surv  12wk           0.1457    0.1491    0.1492 uncalibrated
+RSF  4wk                        0.0704    0.0732    0.0782 uncalibrated
+RSF  12wk                       0.1496    0.1488    0.1501   isotonic
+
+saved /home/dikshant/mamba_rul_project/lead_acid_rul/calibration_results.json

@@ -1,0 +1,14 @@
+# licensed data - CC BY-NC 4.0, must never be redistributed
+*.parquet
+daily.parquet
+
+# model checkpoints - the RUL regressor is a NEGATIVE result in the paper
+*.pt
+*.pth
+
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+.DS_Store

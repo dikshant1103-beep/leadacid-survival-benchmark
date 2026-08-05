@@ -1,0 +1,29 @@
+building landmark survival data (window 90 d) …
+survival data verified —  6003 rows | 1026 batteries | events 2783 (46.4%) | duration 1–581 d
+97 features | horizons [28, 84] d
+
+grouped 5-fold CV — no battery spans a fold
+
+model                           Uno C  Harrell    AUC@28    AUC@84   Brier@28   Brier@84      s
+-----------------------------------------------------------------------------------------------
+Cox PH (age only)               0.671    0.738     0.869     0.864     0.0263     0.0775    2.3
+Cox PH (all features)           0.765    0.820     0.941     0.917     0.0231     0.0612    6.6
+Coxnet (elastic net)            0.760    0.817     0.938     0.917     0.0229     0.0617    4.5
+Random Survival Forest          0.742    0.787     0.913     0.881     0.0224     0.0604  167.2
+Extra Survival Trees            0.735    0.777     0.886     0.857     0.0237     0.0666   19.6
+Gradient Boosted Survival       0.762    0.817     0.938     0.917     0.0219     0.0586  354.4
+GBS (component-wise LS)         0.757    0.813     0.937     0.914     0.0225     0.0605  418.9
+
+==============================================================================
+REFERENCE POINTS
+==============================================================================
+  Voronov & Frisk (Scania fleet, lead-acid, RSF)   AUC 0.69 – 0.772
+  Voronov & Frisk (same study, Cox regression)     AUC 0.63 – 0.675
+  our earlier logistic classifier, 8-week horizon  AUC 0.806
+  random guessing                                  AUC 0.500
+
+best by Uno's C-index: Cox PH (all features) (0.765)
+best at  28-day horizon:  Cox PH (all features) (AUC 0.941 ± 0.014)
+best at  84-day horizon:  Gradient Boosted Survival (AUC 0.917 ± 0.013)
+
+saved /home/dikshant/mamba_rul_project/lead_acid_rul/survival_comparison.json

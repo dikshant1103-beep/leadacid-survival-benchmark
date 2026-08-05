@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+title: >-
+  Survival Analysis Outperforms Regression for Field Prognostics of
+  Valve-Regulated Lead-Acid Batteries: A Reproducible Benchmark on
+  1,027 Solar Off-Grid Systems
+message: If you use this software or its results, please cite the preprint.
+type: software
+authors:
+  - family-names: Dikshant
+    orcid: "https://orcid.org/0009-0006-9434-610X"
+repository-code: "https://github.com/dikshant1103-beep/leadacid-survival-benchmark"
+license: MIT
+preferred-citation:
+  type: article
+  title: >-
+    Survival Analysis Outperforms Regression for Field Prognostics of
+    Valve-Regulated Lead-Acid Batteries: A Reproducible Benchmark on
+    1,027 Solar Off-Grid Systems
+  authors:
+    - family-names: Dikshant
+      orcid: "https://orcid.org/0009-0006-9434-610X"
+  year: 2026
+  notes: >-
+    Preprint submitted to Research Square 2026-08-05. Replace this entry with
+    the assigned DOI once the preprint posts.
